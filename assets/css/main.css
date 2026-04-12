@@ -2244,12 +2244,20 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: linear-gradient(rgba(150, 0, 0, 0.6), rgba(150, 0, 0, 0.6)), url("../../images/intro.jpg");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
+    background: #f5f2e9;
+    color: #2e3b2e;
+    padding: 6em 0;
+    text-align: center;
+}
+
+#intro h2, #intro p {
+    color: #2e3b2e !important;
+}
+
+#intro .button {
+    box-shadow: inset 0 0 0 2px #2e3b2e;
+    color: #2e3b2e !important;
+}
 
 /* One */
 
