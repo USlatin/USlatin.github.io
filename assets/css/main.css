@@ -2244,7 +2244,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("../../images/intro.jpg");
+		background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
