@@ -2244,7 +2244,8 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-    background: #ffffff;
+    background-image: none !important;
+    background-color: #f5f2e9 !important;
     color: #2e3b2e;
     padding: 6em 0;
     text-align: center;
