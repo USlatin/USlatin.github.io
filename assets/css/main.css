@@ -2327,3 +2327,9 @@ input, select, textarea {
 			}
 
 		}
+/* Forces the style2 down button and its icon to be black */
+.main.style1 .button.style2.down,
+.main.style1 .button.style2.down:before {
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
