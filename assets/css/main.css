@@ -2343,5 +2343,5 @@ input, select, textarea {
 /* Target the input fields and textareas */
 input[type="text"], input[type="email"], textarea {
     border-color: #888888 !important;
-    border-width: 2px !important; /* Optional: makes the line thicker/darker */
+    border-width: 1px !important; /* Optional: makes the line thicker/darker */
 }
