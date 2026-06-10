@@ -2333,3 +2333,15 @@ input, select, textarea {
     color: #000000 !important;
     border-color: #000000 !important;
 }
+
+
+/* ADDENDUMS BELOW Target the arrow buttons */
+.button.style2.down {
+    filter: invert(1); /* This turns the white arrow black */
+}
+
+/* Target the input fields and textareas */
+input[type="text"], input[type="email"], textarea {
+    border-color: #000000 !important;
+    border-width: 2px !important; /* Optional: makes the line thicker/darker */
+}
