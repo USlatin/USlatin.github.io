@@ -2327,11 +2327,17 @@ input, select, textarea {
 			}
 
 		}
-/* Forces the style2 down button and its icon to be black */
-.main.style1 .button.style2.down,
-.main.style1 .button.style2.down:before {
+
+
+/* Refined: Force the button and its ring to black within style1 */
+.main.style1 .button.style2.down {
     color: #000000 !important;
     border-color: #000000 !important;
+    box-shadow: inset 0 0 0 2px #000000 !important; /* This kills the white ring */
+}
+
+.main.style1 .button.style2.down:before {
+    color: #000000 !important;
 }
 
 
