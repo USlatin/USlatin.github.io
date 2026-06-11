@@ -167,5 +167,21 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<!-- ADDED SCRIPT FOR PLAY BUTTON PHOTOS TO WORK AS LINKS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // This detects when a user clicks the popup area
+        $('body').on('click', '.poptrox-popup', function() {
+            var link = $(this).find('img').attr('data-link');
+            // Only open if a valid link exists and it's not the placeholder
+            if (link && link !== 'PASTE_LINK_HERE') {
+                window.open(link, '_blank');
+            }
+        });
+    });
+</script>
+		
+		
 	</body>
 </html>
