@@ -184,26 +184,29 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // 1. Identify which link was clicked
-        $('.gallery a').on('click', function() {
-            var $this = $(this);
-            var url = $this.attr('data-link');
-
-            // 2. Wait for the popup to render
-            setTimeout(function() {
-                var $popup = $('.poptrox-popup');
+        $('.gallery a').on('click', function(e) {
+            var url = $(this).attr('data-link');
+            
+            // Only proceed if a link is actually defined
+            if (url && url !== 'PASTE_LINK_HERE') {
                 
-                // 3. If there is a valid URL, disable default lightbox click and add our custom link
-                if (url && url !== 'PASTE_LINK_HERE') {
-                    $popup.css('cursor', 'pointer');
+                // Wait for Poptrox to build the popup (longer timeout for safety)
+                setTimeout(function() {
+                    var $popup = $('.poptrox-popup');
                     
-                    // Stop the popup from scrolling when clicked
-                    $popup.off('click').on('click', function(e) {
-                        e.stopPropagation(); // Prevents lightbox from advancing
+                    // Force the lightbox to stop listening for clicks
+                    $popup.off('click'); 
+                    
+                    // Add our link to the actual image element inside the popup
+                    $popup.find('img').css('cursor', 'pointer').off('click').on('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
                         window.open(url, '_blank');
+                        return false;
                     });
-                }
-            }, 300);
+                }, 500);
+            }
         });
     });
 </script>
