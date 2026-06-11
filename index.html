@@ -36,10 +36,12 @@
             <img src="images/LOGO_organic_footage_TRANSPARENT.png" alt="Organic Footage Logo" style="max-width: 300px; height: auto;">
         </header>
         
-        <div style="display: flex; align-items: flex-end; justify-content: center; gap: 25px;">
-            <img src="images/DOUBLE REEL L TRANSPARENT.png" alt="Organic Reel Left" style="max-width: 80px; height: auto;">
+        <div class="intro-reels-container" style="display: flex; align-items: flex-end; justify-content: center; gap: 50px;">
+            <img class="intro-reel left-reel" src="images/DOUBLE REEL L TRANSPARENT.png" alt="Organic Reel Left" style="max-width: 80px; height: auto;">
+            
             <p style="margin: 0; text-align: center;">Welcome to<br> <strong>Organic Footage</strong>. <br> High-end video production <br> for those who drive culture.</p>
-            <img src="images/DOUBLE REEL R TRANSPARENT.png" alt="Organic Reel Right" style="max-width: 80px; height: auto;">
+            
+            <img class="intro-reel right-reel" src="images/DOUBLE REEL R TRANSPARENT.png" alt="Organic Reel Right" style="max-width: 80px; height: auto;">
         </div>
         
         <footer>
@@ -47,6 +49,17 @@
         </footer>
     </div>
 </section>
+
+<style>
+    @media screen and (max-width: 480px) {
+        .intro-reel {
+            display: none;
+        }
+        .intro-reels-container {
+            gap: 0 !important;
+        }
+    }
+</style>
 
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
