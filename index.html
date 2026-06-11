@@ -171,10 +171,13 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // This detects when a user clicks the popup area
+        // We use a small delay to ensure the popup is fully rendered
         $('body').on('click', '.poptrox-popup', function() {
-            var link = $(this).find('img').attr('data-link');
-            // Only open if a valid link exists and it's not the placeholder
+            // Find the link that opened this popup by looking at the gallery
+            // We search for the active image and grab the link from the wrapper
+            var activeLink = $('.poptrox-popup img').attr('src');
+            var link = $('.gallery a[href*="' + activeLink.split('/').pop() + '"]').attr('data-link');
+            
             if (link && link !== 'PASTE_LINK_HERE') {
                 window.open(link, '_blank');
             }
