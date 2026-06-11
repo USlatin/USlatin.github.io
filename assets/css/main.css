@@ -2351,3 +2351,15 @@ input[type="text"], input[type="email"], textarea {
     border-color: #888888 !important;
     border-width: 1px !important; /* Optional: makes the line thicker/darker */
 }
+
+/* Styling for the new cart icons in the intro header */
+header .cart-icon {
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Make the carts disappear on very small mobile screens if they look too crowded */
+@media screen and (max-width: 480px) {
+    header img:not([alt="Organic Footage Logo"]) {
+        display: none;
+    }
+}
